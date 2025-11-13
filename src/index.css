@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MyWay Design System - Premium medical facility aesthetic inspired by Apple and Tesla
+All colors MUST be HSL. Focus on elegance, trust, and healing.
+*/
+
+@layer base {
+  :root {
+    /* Primary Brand Colors - Navy Blue */
+    --primary: 220 85% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 220 85% 50%;
+    --primary-dark: 220 85% 20%;
+    --primary-glow: 220 85% 45%;
+    
+    /* Neutral Palette - Clean and Professional */
+    --background: 0 0% 99%;
+    --background-subtle: 220 20% 98%;
+    --background-accent: 220 20% 96%;
+    --foreground: 220 20% 8%;
+    --foreground-secondary: 220 15% 25%;
+    --foreground-muted: 220 10% 45%;
+    
+    /* Surface Colors - Light cards with dark text for better readability */
+    --card: 0 0% 96%;
+    --card-foreground: 220 30% 15%;
+    --card-elevated: 0 0% 98%;
+    
+    /* Interactive Elements */
+    --secondary: 155 65% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 155 65% 95%;
+    --accent-foreground: 155 65% 25%;
+    
+    /* States */
+    --muted: 220 15% 90%;
+    --muted-foreground: 220 20% 35%;
+    --hover: 220 85% 42%;
+    --active: 220 85% 35%;
+    
+    /* Functional Colors */
+    --success: 155 65% 35%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Form Elements */
+    --border: 220 20% 90%;
+    --border-strong: 220 20% 80%;
+    --input: 220 20% 96%;
+    --ring: 220 85% 35%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 85% 35%), hsl(155 65% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 85% 20%) 0%, hsl(220 85% 35%) 50%, hsl(155 65% 45%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsla(0 0% 100% / 0.1), hsla(0 0% 100% / 0.05));
+    --gradient-backdrop: linear-gradient(180deg, hsla(220 20% 8% / 0.8), hsla(220 20% 8% / 0.6));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px hsla(220 20% 8% / 0.05);
+    --shadow-md: 0 4px 6px hsla(220 20% 8% / 0.07), 0 2px 4px hsla(220 20% 8% / 0.06);
+    --shadow-lg: 0 10px 15px hsla(220 20% 8% / 0.1), 0 4px 6px hsla(220 20% 8% / 0.05);
+    --shadow-xl: 0 20px 25px hsla(220 20% 8% / 0.1), 0 8px 10px hsla(220 20% 8% / 0.04);
+    --shadow-glow: 0 0 30px hsla(220 85% 45% / 0.3);
+    --shadow-premium: 0 25px 50px hsla(220 20% 8% / 0.15);
+    
+    /* Animation & Transitions */
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-elastic: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Layout */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    
+    /* Typography Scale */
+    --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+    
+    /* Sidebar (maintaining compatibility) */
+    --sidebar-background: 220 20% 98%;
+    --sidebar-foreground: 220 20% 25%;
+    --sidebar-primary: 220 85% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 96%;
+    --sidebar-accent-foreground: 220 20% 8%;
+    --sidebar-border: 220 20% 90%;
+    --sidebar-ring: 220 85% 35%;
+  }
+
+  .dark {
+    /* Brightened dark theme with light gray boxes */
+    --background: 220 25% 12%;
+    --background-subtle: 220 25% 16%;
+    --background-accent: 220 25% 20%;
+    --foreground: 0 0% 98%;
+    --foreground-secondary: 220 15% 85%;
+    --foreground-muted: 220 10% 70%;
+    
+    /* Light gray cards for content boxes with dark text */
+    --card: 220 10% 88%;
+    --card-foreground: 220 25% 15%;
+    --card-elevated: 220 5% 92%;
+    
+    --secondary: 220 25% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --accent: 155 65% 20%;
+    --accent-foreground: 155 65% 90%;
+    
+    /* Improved muted colors for better contrast on light cards */
+    --muted: 220 10% 82%;
+    --muted-foreground: 220 15% 35%;
+    --hover: 220 85% 50%;
+    --active: 220 85% 42%;
+    
+    --border: 220 25% 25%;
+    --border-strong: 220 25% 35%;
+    --input: 220 25% 16%;
+    --ring: 220 85% 50%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(220 25% 6%) 0%, hsl(220 85% 15%) 50%, hsl(155 65% 25%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsla(0 0% 100% / 0.05), hsla(0 0% 100% / 0.02));
+    --gradient-backdrop: linear-gradient(180deg, hsla(220 25% 6% / 0.9), hsla(220 25% 6% / 0.7));
+    
+    --shadow-glow: 0 0 30px hsla(220 85% 45% / 0.2);
+    
+    /* Sidebar dark theme */
+    --sidebar-background: 220 25% 8%;
+    --sidebar-foreground: 220 15% 75%;
+    --sidebar-primary: 220 85% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 25% 12%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 25% 15%;
+    --sidebar-ring: 220 85% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-primary antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  /* Typography Improvements */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-medium tracking-tight;
+  }
+  
+  /* Smooth scrolling and focus improvements */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Enhanced focus styles */
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer components {
+  /* Glass morphism effects with better contrast */
+  .glass {
+    backdrop-filter: blur(20px);
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    color: hsl(var(--card-foreground));
+  }
+  
+  .glass-strong {
+    backdrop-filter: blur(40px);
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    color: hsl(var(--card-foreground));
+  }
+  
+  /* Premium button styles */
+  .btn-premium {
+    @apply relative overflow-hidden bg-gradient-to-r from-primary to-primary-light text-primary-foreground;
+    @apply px-8 py-4 rounded-xl font-medium transition-all duration-300;
+    @apply shadow-lg hover:shadow-xl hover:shadow-primary/25;
+    @apply hover:scale-105 active:scale-95;
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .btn-premium::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-white/20 to-transparent;
+    @apply opacity-0 transition-opacity duration-300;
+  }
+  
+  .btn-premium:hover::before {
+    @apply opacity-100;
+  }
+  
+  /* Elegant animations */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .animate-fade-in-scale {
+    animation: fadeInScale 0.5s ease-out forwards;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+  
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-all duration-300 hover:translate-y-[-4px] hover:shadow-lg;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-glow;
+  }
+}
+
+@layer utilities {
+  /* Custom keyframes */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes pulse-soft {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  .animate-pulse-soft {
+    animation: pulse-soft 2s ease-in-out infinite;
+  }
+}
